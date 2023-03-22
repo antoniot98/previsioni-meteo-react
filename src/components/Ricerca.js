@@ -1,12 +1,16 @@
 import React from "react";
 import { useGlobalContext } from "../context";
-
+import Loading from "./Loading";
 function Ricerca() {
   const { isLoading, isError, data } = useGlobalContext();
   if (isLoading) {
-    return <h3>Loading...</h3>;
+    return <Loading />;
   } else if (isError) {
-    return <h3>Errore</h3>;
+    return (
+      <div className="container d-flex align-items-center justify-content-center mt-5">
+        <h1>OPS CI DISPIACE CITTA INSERITA NON TROVATA!</h1>
+      </div>
+    );
   } else {
     return (
       <section className="risultati">
@@ -63,7 +67,10 @@ function Ricerca() {
               </li>
             </ul>
             <small>
-              <strong>Ultimo aggiornamento: {data.location.localtime}</strong>
+              <strong>
+                Ultimo aggiornamento:{" "}
+                {new Date(data.location.localtime).toLocaleString()}
+              </strong>
             </small>
           </div>
         </div>

@@ -23,10 +23,15 @@ const AppProvider = ({ children }) => {
       try {
         setIsLoading(true);
         const response = await fetch(`${url}${ricerca}`, options);
-        const dati = await response.json();
-        console.log(dati);
-        setIsLoading(false);
-        setData(dati);
+
+        if (response.ok) {
+          const dati = await response.json();
+          setData(dati);
+          setIsLoading(false);
+        } else {
+          setIsLoading(false);
+          setIsError(true);
+        }
       } catch (err) {
         setIsError(true);
       }
