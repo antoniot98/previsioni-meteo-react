@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&family=Roboto+Slab:wght@300&display=swap");
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  background-image: linear-gradient(#7dc7c9, #72e0e3, #8adbde, #67a4a6);
+  border-radius: 0.5em;
+  border: 1px solid #ffe4c4;
+  box-shadow: 5px 5px rgb(255, 235, 171);
+  font-family: "Roboto Slab", serif;
+  margin-top: 1em;
+
+  img {
+    &.sole {
+      width: 90px;
+      height: 90px;
+      margin: 0;
+      align-self: flex-start;
+      order: 3;
+      margin-left: auto;
+    }
+
+    &.luna {
+      width: 90px;
+      height: 90px;
+      margin: 0;
+      align-self: flex-end;
+      order: 1;
+      margin-right: auto;
+    }
+  }
+}
+
+header > h1 {
+  margin: 1em;
+  text-align: center;
+  font-weight: bold;
+  order: 2;
+}
+
+@media screen and (max-width: 320px) {
+  header {
+    img {
+      &.sole {
+        width: 60px;
+        height: 60px;
+      }
+      &.luna {
+        width: 60px;
+        height: 60px;
+      }
+    }
+  }
+}

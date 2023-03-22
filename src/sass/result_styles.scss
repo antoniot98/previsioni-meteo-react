@@ -1,0 +1,52 @@
+.risultati {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#card-risultati {
+  small {
+    display: block;
+    text-align: right;
+  }
+  width: 100%;
+}
+.gmap_canvas {
+  display: flex;
+  flex-direction: column;
+}
+
+.gmap_canvas {
+  iframe {
+    margin: 0;
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+  }
+}
+
+.list-group-item {
+  h5 {
+    display: inline;
+    font-weight: bold;
+  }
+  p {
+    display: inline;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #card-risultati {
+    width: 70%;
+  }
+
+  .ricerca {
+    form {
+      display: inline;
+    }
+  }
+  .gmap_canvas {
+    iframe {
+      height: 450px;
+    }
+  }
+}

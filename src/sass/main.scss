@@ -1,0 +1,14 @@
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../sass/body_styles.scss";
+@import "../sass/header_styles.scss";
+@import "../sass/search_styles.scss";
+@import "../sass/result_styles.scss";
+
+.mapouter {
+    position: relative;
+    text-align: right;
+  }
+  .gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+  }
